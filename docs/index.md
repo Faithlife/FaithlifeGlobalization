@@ -1,12 +1,12 @@
-# ProjectName
+# Faithlife.Globalization
 
-**ProjectName** description
+**Faithlife.Globalization** description
 
 ## Installation
 
-ProjectName should be installed [via NuGet](https://www.nuget.org/packages/ProjectName).
+Faithlife.Globalization should be installed [via NuGet](https://www.nuget.org/packages/Faithlife.Globalization).
 
 ## Documentation
 
-* [Reference Documentation](ProjectName.md)
+* [Reference Documentation](Faithlife.Globalization.md)
 
