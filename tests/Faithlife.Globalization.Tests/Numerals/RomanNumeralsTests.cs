@@ -180,7 +180,7 @@ namespace Faithlife.Globalization.Numerals.Tests
 		public void FormatterFallback()
 		{
 			DateTime dt = new DateTime(2006, 10, 12);
-			Assert.AreEqual("12/10/2006 MMVI", string.Format(RomanNumerals.GetFormatProvider(new CultureInfo("en-NZ")),
+			Assert.AreEqual("12/10/2006 MMVI", string.Format(RomanNumerals.GetFormatProvider(new CultureInfo("en-GB")),
 				"{0:d} {1:XVI}", dt, dt.Year));
 		}
 
@@ -189,7 +189,7 @@ namespace Faithlife.Globalization.Numerals.Tests
 		{
 			DateTime dt = new DateTime(2006, 10, 12);
 			Assert.AreEqual("12/10/2006 MMVI", string.Format(RomanNumerals.GetFormatProvider(
-				RomanNumerals.GetFormatProvider(new CultureInfo("en-NZ"))),
+				RomanNumerals.GetFormatProvider(new CultureInfo("en-GB"))),
 				"{0:d} {1:XVI}", dt, dt.Year));
 		}
 
