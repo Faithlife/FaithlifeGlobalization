@@ -1,6 +1,6 @@
 # Faithlife.Globalization
 
-Description
+Utility library for internationalization and localization.
 
 ## Build Status
 
