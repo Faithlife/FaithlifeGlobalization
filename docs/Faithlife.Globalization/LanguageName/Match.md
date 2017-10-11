@@ -17,7 +17,7 @@ A [`LanguageNameMatch`](../LanguageNameMatch.md) that describes the comparison b
 
 ## Remarks
 
-When the looked-for language name is used first and the available language name is used second, the default ordering of [`LanguageNameMatch`](../LanguageNameMatch.md)indicates the attractiveness of the match.
+When the looked-for language name is used first and the available language name is used second, the default ordering of [`LanguageNameMatch`](../LanguageNameMatch.md) indicates the attractiveness of the match.
 
 ## See Also
 
@@ -46,7 +46,7 @@ A [`LanguageNameMatch`](../LanguageNameMatch.md) that describes the comparison b
 
 ## Remarks
 
-When the looked-for language name is used first and the available language name is used second, the default ordering of [`LanguageNameMatch`](../LanguageNameMatch.md)indicates the attractiveness of the match.
+When the looked-for language name is used first and the available language name is used second, the default ordering of [`LanguageNameMatch`](../LanguageNameMatch.md) indicates the attractiveness of the match.
 
 ## See Also
 

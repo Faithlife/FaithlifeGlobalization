@@ -1,7 +1,5 @@
 # Faithlife.Globalization assembly
 
-The assembly `Faithlife.Globalization.dll` has 12 public types in 2 namespaces.
-
 ## Faithlife.Globalization namespace
 
 | public type | description |
