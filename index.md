@@ -1,6 +1,6 @@
 # Faithlife.Globalization
 
-**Faithlife.Globalization** description
+**Faithlife.Globalization** provides helper methods for handling Unicode, internationalization, and localization.
 
 ## Installation
 
