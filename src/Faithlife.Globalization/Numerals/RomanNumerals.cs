@@ -2,7 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
-using Faithlife.Utility.Invariant;
+using Faithlife.Utility;
 
 namespace Faithlife.Globalization.Numerals
 {

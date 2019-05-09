@@ -1,10 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 using Faithlife.Globalization.Numerals;
 using Faithlife.Utility;
-using Faithlife.Utility.Invariant;
 
 namespace Faithlife.Globalization
 {

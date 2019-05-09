@@ -152,10 +152,8 @@ namespace Faithlife.Globalization
 		/// </summary>
 		/// <param name="cultures">The language names to match.</param>
 		/// <returns>The best language name in the collection.</returns>
-		public LanguageName FindBestMatch(IEnumerable<LanguageName> cultures)
-		{
-			return cultures.Max((cultureA, cultureB) => BestMatchComparison(cultureA, cultureB));
-		}
+		public LanguageName FindBestMatch(IEnumerable<LanguageName> cultures) =>
+			cultures.OrderByDescending(x => x, new LanguageNameMatchComparer(LanguageName)).FirstOrDefault();
 
 		/// <summary>
 		/// Finds the best match for this culture among a collection of cultures.
@@ -164,9 +162,9 @@ namespace Faithlife.Globalization
 		/// <returns>The best culture in the collection.</returns>
 		public Culture FindBestMatch(IEnumerable<Culture> cultures)
 		{
-			Comparison<LanguageName> fnComparison = BestMatchComparison;
-			return cultures.Max(
-				(cultureA, cultureB) => fnComparison(cultureA.LanguageName, cultureB.LanguageName));
+			var languageComparer = new LanguageNameMatchComparer(LanguageName);
+			var cultureComparer = ComparisonUtility.CreateComparer<Culture>((x, y) => languageComparer.Compare(x.LanguageName, y.LanguageName));
+			return cultures.OrderByDescending(x => x, cultureComparer).FirstOrDefault();
 		}
 
 		/// <summary>
@@ -177,9 +175,9 @@ namespace Faithlife.Globalization
 		/// <returns>The best culture in the collection.</returns>
 		public T FindBestMatch<T>(IEnumerable<T> cultures, Func<T, LanguageName> converter)
 		{
-			Comparison<LanguageName> fnComparison = BestMatchComparison;
-			return cultures.Max(
-				(cultureA, cultureB) => fnComparison(converter(cultureA), converter(cultureB)));
+			var languageComparer = new LanguageNameMatchComparer(LanguageName);
+			var cultureComparer = ComparisonUtility.CreateComparer<T>((x, y) => languageComparer.Compare(converter(x), converter(y)));
+			return cultures.OrderByDescending(x => x, cultureComparer).FirstOrDefault();
 		}
 
 		/// <summary>

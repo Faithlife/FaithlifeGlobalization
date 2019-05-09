@@ -88,10 +88,11 @@ namespace Faithlife.Globalization
 
 				LanguageNameMatchComparer comparer = new LanguageNameMatchComparer(language);
 				cultureInfo = cultures
-					.Select(ci => new { CultureInfo = ci, Language = LanguageName.TryCreate(ci.Name) })
+					.Select(ci => (CultureInfo: ci, Language: LanguageName.TryCreate(ci.Name)))
 					.Where(item => item.Language.HasValue)
-					.OrderBy(item => item.CultureInfo.Name, StringComparer.OrdinalIgnoreCase)
-					.Max((itemA, itemB) => comparer.Compare(itemA.Language.Value, itemB.Language.Value)).CultureInfo;
+					.OrderByDescending(x => x, ComparisonUtility.CreateComparer<(CultureInfo, LanguageName?)>((x, y) => comparer.Compare(x.Item2.Value, y.Item2.Value)))
+					.ThenBy(item => item.CultureInfo.Name, StringComparer.OrdinalIgnoreCase)
+					.First().CultureInfo;
 
 				// cache the found culture
 				lock (s_lock)
