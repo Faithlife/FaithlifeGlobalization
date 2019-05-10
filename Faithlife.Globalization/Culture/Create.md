@@ -50,7 +50,8 @@ A culture for the specified language.
 Creates a culture with the specified properties.
 
 ```csharp
-public static Culture Create(LanguageName language, CultureInfo formatCultureInfo, CultureInfo resourceCultureInfo)
+public static Culture Create(LanguageName language, CultureInfo formatCultureInfo, 
+    CultureInfo resourceCultureInfo)
 ```
 
 | parameter | description |

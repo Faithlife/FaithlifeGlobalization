@@ -23,7 +23,6 @@ public struct SortableTitle : IEquatable<SortableTitle>
 
 ## See Also
 
-* struct [SortableTitle](SortableTitle.md)
 * namespace [Faithlife.Globalization](../Faithlife.Globalization.md)
 * [SortableTitle.cs](https://github.com/Faithlife/FaithlifeGlobalization/tree/master/src/Faithlife.Globalization/SortableTitle.cs)
 

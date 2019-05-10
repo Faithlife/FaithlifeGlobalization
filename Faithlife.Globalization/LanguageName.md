@@ -36,7 +36,6 @@ The script tag is supported, but is merged with the language tag, so that az-Cyr
 
 ## See Also
 
-* struct [LanguageName](LanguageName.md)
 * namespace [Faithlife.Globalization](../Faithlife.Globalization.md)
 * [LanguageName.cs](https://github.com/Faithlife/FaithlifeGlobalization/tree/master/src/Faithlife.Globalization/LanguageName.cs)
 
