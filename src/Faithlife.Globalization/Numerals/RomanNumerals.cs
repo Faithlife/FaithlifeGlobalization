@@ -191,9 +191,9 @@ namespace Faithlife.Globalization.Numerals
 		};
 
 		static readonly Regex s_reRomanNumeralString = new Regex(@"^(" +
-			@"(?=[MDCLXVI])M{0,4}(DC{0,4}|CM|CD|C{0,4})(LX{0,4}|XC|XL|X{0,4})(VI{0,4}|IX|IV|I{0,4})" +
+			@"M{0,4}(DC{0,4}|CM|CD|C{0,4})(LX{0,4}|XC|XL|X{0,4})(VI{0,4}|IX|IV|I{0,4})" +
 			@"|" +
-			@"(?=[mdclxvi])m{0,4}(dc{0,4}|cm|cd|c{0,4})(lx{0,4}|xc|xl|x{0,4})(vi{0,4}|ix|iv|i{0,4})" +
+			@"m{0,4}(dc{0,4}|cm|cd|c{0,4})(lx{0,4}|xc|xl|x{0,4})(vi{0,4}|ix|iv|i{0,4})" +
 			@")$",
 			RegexOptions.CultureInvariant | RegexOptions.ExplicitCapture);
 	}
